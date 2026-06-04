@@ -1,1 +1,255 @@
+/* ===== ОБЩИЕ ПЕРЕМЕННЫЕ ===== */
+:root {
+    --primary: #e63946;      /* Красный — энергия, скорость */
+    --primary-dark: #c1121f;
+    --secondary: #1d3557;    /* Тёмно-синий — надёжность */
+    --dark: #0b1a2c;
+    --gray: #6c757d;
+    --light: #f8f9fa;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --radius: 20px;
+    --radius-sm: 12px;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    padding: 0 0 40px 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* ===== ШАПКА ===== */
+.header {
+    background: var(--white);
+    padding: 20px 16px;
+    border-radius: 0 0 var(--radius) var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header h1 span {
+    background: var(--primary);
+    color: white;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* ===== КАТЕГОРИИ ===== */
+.categories {
+    margin-bottom: 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    padding-bottom: 8px;
+}
+
+.category-buttons {
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.cat-btn {
+    background: var(--white);
+    border: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--secondary);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.cat-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.cat-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* ===== КАРТОЧКА ТОВАРА ===== */
+.card {
+    background: var(--white);
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #e9ecef;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.card-description {
+    color: var(--gray);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.price small {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: var(--gray);
+}
+
+.stock {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.stock.in-stock {
+    background: #d4edda;
+    color: #155724;
+}
+
+.stock.out-stock {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.contact-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.contact-btn:hover {
+    background: var(--primary-dark);
+    transform: scale(0.98);
+}
+
+/* ===== ПУСТОЕ СОСТОЯНИЕ ===== */
+.empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--gray);
+}
+
+.empty-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+/* ===== НИЖНЯЯ НАВИГАЦИЯ (опционально) ===== */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #e0e0e0;
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7rem;
+    color: var(--gray);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-item.active {
+    color: var(--primary);
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .card h3 {
+        font-size: 1rem;
+    }
+    
+    .price {
+        font-size: 1.2rem;
+    }
+}
