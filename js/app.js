@@ -21,19 +21,25 @@ async function loadData() {
 
 function renderCategoryButtons(categories) {
     const container = document.getElementById('categoryButtons');
-    let html = `<button class="cat-btn" data-cat="all">Все</button>`;
+    let html = `<button class="cat-btn" data-cat="all">🏠 Все</button>`;
     categories.forEach(cat => {
         html += `<button class="cat-btn" data-cat="${cat.name}">${cat.icon} ${cat.name}</button>`;
     });
     container.innerHTML = html;
     
-    // Навешиваем обработчики
     document.querySelectorAll('.cat-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
+            // Убираем активный класс у всех
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            // Добавляем текущему
+            btn.classList.add('active');
             currentCategory = btn.dataset.cat;
             renderProducts();
         });
-    });
+    
+    // Подсвечиваем "Все" по умолчанию
+    const allBtn = document.querySelector('.cat-btn[data-cat="all"]');
+    if (allBtn) allBtn.classList.add('active');
 }
 
 function renderProducts() {
