@@ -5,24 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Веломагазин</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Быстрые стили для прототипа — потом их можно будет перенести в style.css */
-        body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
-        .container { max-width: 600px; margin: 0 auto; }
-        .card { background: white; border-radius: 16px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; gap: 16px; }
-        .card img { width: 100px; height: 100px; object-fit: cover; border-radius: 12px; }
-        .price { font-weight: bold; color: #e63946; font-size: 1.2rem; }
-        button { background: #e63946; border: none; color: white; padding: 8px 16px; border-radius: 8px; font-weight: bold; }
-        .category-buttons { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
-        .cat-btn { background: #2b2d42; color: white; border: none; padding: 8px 16px; border-radius: 20px; }
-    </style>
 </head>
 <body>
-<div class="container">
-    <h1>🚲 Веломагазин</h1>
-    <div class="category-buttons" id="categoryButtons"></div>
-    <div id="catalog"></div>
-</div>
-<script src="js/app.js"></script>
+    <div class="header">
+        <div class="container">
+            <h1>🚲 Веломагазин <span>каталог</span></h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="categories">
+            <div class="category-buttons" id="categoryButtons"></div>
+        </div>
+        <div id="catalog"></div>
+    </div>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
