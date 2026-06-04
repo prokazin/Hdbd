@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Горные",
+    "icon": "⛰️",
+    "enabled": true
+  },
+  {
+    "name": "Шоссейные",
+    "icon": "🏁",
+    "enabled": true
+  },
+  {
+    "name": "Экипировка",
+    "icon": "🪖",
+    "enabled": true
+  }
+]
