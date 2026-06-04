@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "Горный велосипед Author",
+    "description": "Алюминиевая рама, 21 скорость, дисковые тормоза",
+    "price": 45990,
+    "photo": "https://avatars.mds.yandex.net/i?id=5d0b7b8c1c2a3e4f5a6b7c8d9e0f1a2b-1234567",
+    "category": "Горные",
+    "inStock": true,
+    "sku": "AUTH-MT-01",
+    "popular": true
+  },
+  {
+    "id": 2,
+    "name": "Шлем защитный",
+    "description": "Универсальный, размер M/L, сертификат CE",
+    "price": 3490,
+    "photo": "https://avatars.mds.yandex.net/i?id=6e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2-7654321",
+    "category": "Экипировка",
+    "inStock": true,
+    "sku": "HELM-UNI",
+    "popular": false
+  }
+]
